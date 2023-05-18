@@ -8,6 +8,7 @@ on:
       - 1.2.*
       - release*
       - MOSIP-26057
+      - tf-*
 jobs:
 
   build-artifactory-server:
