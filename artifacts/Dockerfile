@@ -73,6 +73,9 @@ ENV test_jar_path=${base_path}/libs-release-local/io/mosip/testing/
 # environment variable for ref-idobjectvalidator jar
 ENV idobject_jar_path=${base_path}/libs-release-local/io/mosip/kernel/kernel-ref-idobjectvalidator
 
+# environment variable for custom-impl jar path
+ENV custom_zip_path=${base_path}/libs-release-local/impl
+
 # environment variable for regproc auth jar
 ENV regproc_jar_path=${base_path}/libs-release-local/io/mosip/kernel/kernel-auth-adapter
 
@@ -151,6 +154,8 @@ COPY /src/icu4j/* ${icu4j_jar_path}/
 COPY /src/auth/* ${regproc_jar_path}/
 
 COPY ./configure.sh ${work_dir}/
+
+COPY /src/impl/* ${custom_zip_path}/
 
 COPY pom.xml ${work_dir}/
 
